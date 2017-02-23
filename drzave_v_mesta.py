@@ -7,11 +7,10 @@ def main():
         "Italija": "Rim",
     }
 
-    drzava = random.randint(0, 2)
-    izbrana_drzava = drzave_v_mesta.keys()[drzava]
-
     for drzava in drzave_v_mesta:
-        uganjeno_mesto = raw_input("Katero je glavno mesto drzave %s: " %izbrana_drzava)
+        random_drzava = random.randint(0, 2)
+        drzava = drzave_v_mesta.keys()[random_drzava]
+        uganjeno_mesto = raw_input("Katero je glavno mesto drzave " + drzava + ": ")
 
         preveri(drzava, uganjeno_mesto, drzave_v_mesta)
 
